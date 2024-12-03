@@ -1,6 +1,8 @@
 #include <bits/stdc++.h>
 #include <fstream>
 
+using namespace std;
+
 vector<int> getNumbers(const string s) {
     size_t start = 0, end;
     vector<int> nums;
