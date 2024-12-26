@@ -13,8 +13,8 @@ object Main {
   }
 
   def main(args: Array[String]): Unit = {
-    var programString = new StringBuilder("")       // "xmul(2,4)&mul[3,7]!^don't()_mul(5,5)+mul(32,64](mul(11,8)undo()?mul(8,5))"
-    val inputFile = fromFile("./input/day3ex.txt")
+    var programString = new StringBuilder("")
+    val inputFile = fromFile("./input/day3.txt")
     try {
       val lines = inputFile.getLines
        while(lines.hasNext) {
@@ -22,8 +22,8 @@ object Main {
        }
     } finally inputFile.close
     val sumOfMultiplications = parseMul(programString.toString)
-    // val sumOfMultiplications2 = parseMul(programString.toString, true)
+    val sumOfMultiplications2 = parseMul(programString.toString, true)
     println(s"part1: $sumOfMultiplications")
-    // println(s"part2: $sumOfMultiplications2")
+    println(s"part2: $sumOfMultiplications2")
   }
 }
